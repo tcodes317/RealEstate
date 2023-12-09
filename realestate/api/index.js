@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import userRouter from "./routes/user.route.js";
 
 dotenv.config({path: "../src/config.env"});
 
@@ -22,3 +23,5 @@ app.use(express.json())
 app.listen(process.env.DB_PORT, "127.0.0.1", ()=>{
     console.log("Connected")
 });
+
+app.use("/api/user", userRouter)
