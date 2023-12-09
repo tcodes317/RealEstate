@@ -7,10 +7,12 @@ function Header(){
         <>
             <header className="xs:relative xs:px-4 md:py-4">
                 <div className="xl:justify-evenly xs:flex xs:flex-row xs:items-center xs:justify-between">
-                    <div className="xs:flex xs:py-4">
-                        <span className="xs:text-slate-500 xl:text-3xl xs:block xs:text-2xl">Sahad</span>
-                        <span className="xs:font-bold xs:block xl:text-3xl xs:text-2xl">Estate</span>
-                    </div>
+                    <Link to="/">
+                        <div className="xs:flex xs:py-4">
+                            <span className="xs:text-slate-500 xl:text-3xl xs:block xs:text-2xl">Sahad</span>
+                            <span className="xs:font-bold xs:block xl:text-3xl xs:text-2xl">Estate</span>
+                        </div>
+                    </Link>
                     <div className="md:border-2 md:w-5/12 md:px-2 md:pr-4">
                         <form action="" method="POST" className="xs:flex xs:items-center xs:px-4 md:px-0">
                             <input type="search" placeholder="Search ..." className="md:w-full md:block focus:outline-none md:sticky xs:absolute xs:hidden xs:top-14 xs:left-0 xs:p-2 xs:border-2 md:border-none xs:w-full"/>
