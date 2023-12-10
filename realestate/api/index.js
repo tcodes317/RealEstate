@@ -16,6 +16,10 @@ const app=express();
 
 app.use(express.json())
 
+
+app.use("/api/user", userRouter);
+app.use("/api/auth", authRouter);
+
 // app.get();
 // app.patch();
 // app.delete();
@@ -24,6 +28,3 @@ app.use(express.json())
 app.listen(process.env.DB_PORT, "127.0.0.1", ()=>{
     console.log("Connected")
 });
-
-app.use("/api/user", userRouter);
-app.use("/api/auth", authRouter);

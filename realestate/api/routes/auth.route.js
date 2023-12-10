@@ -5,4 +5,4 @@ const appRouter = express.Router();
 
 appRouter.post("/signup", signup);
 
-export default appRouter
+export default appRouter;
