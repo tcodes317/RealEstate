@@ -22,7 +22,7 @@ function Header(){
                     <div className="xs:flex xs:items-center xs:space-x-7 ">
                         <FaSearch className="xs:text-xl md:hidden" />
                         <FaAlignRight className="xs:text-xl md:hidden" />
-                        <ul className="md:flex md:space-x-4 xl:text-xl xl:space-x-8">
+                        <ul className="xs:hidden md:flex md:space-x-4 xl:text-xl xl:space-x-8">
                             <Link to="/">
                                 <li>Home</li>
                             </Link>
@@ -35,7 +35,6 @@ function Header(){
                             <Link to="/">
                                 <li>Sign In</li>
                             </Link>
-                            
                         </ul>
                     </div>
                 </div>
