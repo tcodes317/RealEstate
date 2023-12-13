@@ -14,9 +14,6 @@ mongoose.connect(process.env.DB_CONN).then((conn)=>{
 
 const app=express();
 
-app.use(express.json())
-// custom middle ware
-
 app.use((err, req, res, next)=>{
     const statusCode = err.statusCode || 500;
     const message = err.message || "Internal Server Error";
@@ -25,15 +22,10 @@ app.use((err, req, res, next)=>{
         statusCode,
         message,
     });
-})
+});
 
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
-
-// app.get();
-// app.patch();
-// app.delete();
-// app.post();
 
 app.listen(process.env.DB_PORT, "127.0.0.1", ()=>{
     console.log("Connected")
